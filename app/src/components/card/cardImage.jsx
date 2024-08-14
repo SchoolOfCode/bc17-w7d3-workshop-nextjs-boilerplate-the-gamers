@@ -1,13 +1,8 @@
 import Image from "next/image";
 
-const CardImage = () => {
-    return (
-        <Image 
-        src="how-it-works-1.png"
-        alt="firplace room with orange chairs"
-        width="500"
-        height="500"
-        />
+const CardImage = ({ src, alt }) => {
+  console.log(src, alt);
+  return <Image src={src} alt={alt} width="500" height="500" />;
+};
 
-    )
-}
+export default CardImage;
