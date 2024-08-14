@@ -1,0 +1,26 @@
+.hero_body,
+.hero_caption_box {
+    flex-direction: column;
+    padding: 1.2em;
+}
+
+.hero_img {
+    width: 100%;
+}
+
+.hero_caption_title {
+    font-size: 2em;
+}
+
+.hero_caption_box {
+    background-color: #e4963d;
+    padding: 1rem;
+}
+
+.hero_caption_subtitle {
+    font-weight: bold;
+}
+
+.hero_caption_subtitle span:last-child {
+    color: white;
+}

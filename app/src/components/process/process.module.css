@@ -1,0 +1,8 @@
+.process {
+    background-color: white;
+    text-align: center;
+}
+
+.process_body {
+    flex-direction: column;
+}

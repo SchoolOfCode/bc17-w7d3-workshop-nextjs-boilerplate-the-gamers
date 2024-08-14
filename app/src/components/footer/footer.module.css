@@ -1,0 +1,19 @@
+.footer_wrapper {
+    background-color: white;
+    align-items: center;
+    height: 200px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.social,
+.notice,
+.social_links,
+.social_tag {
+    flex-direction: column;
+    padding: 1.2em;
+    line-height: 2em;
+}
+
+.social_links span:nth-child(even) {
+    display: none;
+}
