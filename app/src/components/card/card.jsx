@@ -8,6 +8,8 @@ function Card() {
       title: "Give us a call...",
       desc: `Call us and book in a "Design Consulation" on a date and time to suit you`
     }
+
+    
   ];
 
   return (
