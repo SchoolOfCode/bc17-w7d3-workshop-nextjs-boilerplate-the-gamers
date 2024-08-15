@@ -1,5 +1,5 @@
 import Card from "../card/card";
-import "./process.module.css";
+import styles from "./process.module.css";
 
 function Process() {
   const cards = [
@@ -27,8 +27,8 @@ function Process() {
   ];
 
   return (
-    <section className="process grid">
-      <h1 className="process_title">How it works.</h1>
+    <section className={`${styles.process} grid`}>
+      <h1 className={styles.process_title}>How it works.</h1>
       {cards.map((card) => {
         return <Card card={card} key={card.id} />;
       })}
