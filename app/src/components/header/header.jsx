@@ -29,7 +29,7 @@ function Header() {
           />
         </button>
       </header>
-      {toggleButton ? <Menu /> : ""}
+      {toggleButton ? <Menu> </Menu> /> : ""}
     </>
   );
 }
