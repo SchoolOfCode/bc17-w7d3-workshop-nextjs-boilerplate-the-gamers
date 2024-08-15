@@ -1,8 +1,18 @@
 .menu_wrapper {
-    background:  #e4963d;
+    background: #e4963d;
+    display: flex;
     position: fixed;
     height: 100%;
     width: 100%;
-    padding: 1rem; 
+    padding: 1rem;
     top: 0;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.menuItem {
+    margin-top: 1em;
+    font-size: 1.5em;
+    color: black;
 }
