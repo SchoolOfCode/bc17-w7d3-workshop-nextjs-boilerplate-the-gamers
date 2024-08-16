@@ -3,7 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  border-bottom: .15rem solid #ff814f;
+  position: fixed;
+  width: 100vw;
+  z-index: 5000;
 }
 
 .header_title {
@@ -11,9 +14,29 @@
   font-size: 1.5rem;
 }
 
+.header_logo {
+
+  margin-left: 1rem;
+}
+
 .closeIcon,
 .MenuIcon {
   border: none;
   background: transparent;
-  margin-bottom: 1em;
+  padding: 1rem;
+  align-items: center;
+}
+
+.MenuIcon {
+  margin-right: 1rem;
+}
+
+.closeIcon {
+  filter: invert(1);
+}
+
+@media screen and (min-width: 600px) {
+  .header_wrapper {
+    padding: 0 5rem;
+  }
 }

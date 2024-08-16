@@ -6,6 +6,7 @@
 .hero_caption_box {
     flex-direction: column;
     padding: 1.2em;
+    color: white;
 }
 
 .hero_img {
@@ -31,29 +32,62 @@
     margin-top: .5rem;
 }
 
-.hero_caption_subtitle span:first-child {
-    margin-left: .5rem;
-    padding: .5rem;
-    background: #444d5d;
-    border-radius: .25rem 0 0 .25rem;
+.hero_caption_subtitle span {
+    margin-top: 1rem;
+    font-size: 3rem;
 }
 
+.hero_caption_subtitle span:first-child,
 .hero_caption_subtitle span:last-child {
     padding: .5rem;
     background: #fff;
     color: #444d5d;
-    border-radius: 0 .25rem .25rem 0;
+}
+
+.hero_caption_subtitle span:nth-child(2) {
+    padding: .5rem;
+    background: #444d5d;
+}
+
+.hero_caption_subtitle span:first-child {
+    margin-left: .5rem;
+    padding: .5rem;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.hero_caption_subtitle span:last-child {
+    padding: .5rem;
+    border-radius: 0 .5rem .5rem 0;
 }
 
 @media screen and (min-width: 600px) {
     .hero_body {
-        flex-direction: row;
+        flex-direction: row-reverse;
         width: 100%;
         height: 40rem;
         padding: 1rem;
         align-items: center;
         position: relative;
         box-sizing: border-box;
+    }
+
+    .hero_caption_subtitle {
+        position: absolute;
+        top: 50%;
+        /* left: 50%; */
+        transform: translate(25%, 55%);
+        z-index: 10;
+        border-radius: 1rem;
+    }
+
+    .hero_caption_subtitle span,
+    .hero_caption_subtitle span:first-child,
+    .hero_caption_subtitle span:last-child,
+    .hero_caption_subtitle span:nth-child(2) {
+        line-height: 2.25rem;
+        padding: 1rem;
+        margin: 0;
+        margin-left: 0;
     }
 
     .hero_img {
@@ -64,22 +98,20 @@
         box-sizing: border-box;
         position: relative;
         object-fit: cover;
+        object-position: top;
     }
 
     .hero_caption_box {
-        flex: 1;
+        flex: 1 1;
         border-radius: 1rem;
         color: white;
-        width: 45%;
+        margin-left: 0;
+        min-width: 45%;
+        min-height: 25%;
         box-sizing: border-box;
-        padding: 5rem 2rem;
+        padding: 2rem;
         position: absolute;
-        transform: translate(-50%, -50%);
-    }
-
-    .hero_caption_box_subtitle {
-        flex: 1;
-        width: 100%;
-        box-sizing: border-box;
+        transform: translate(-30%, 10%);
+        overflow: visible;
     }
 }

@@ -1,8 +1,13 @@
 import Image from "next/image";
+import styles from './card.module.css'
 
 const CardImage = ({ src, alt }) => {
   console.log(src, alt);
-  return <Image src={src} alt={alt} width="350" height="350" />;
+  return (
+    <div className={styles.card_img_container}>
+      <Image className={styles.card_img} src={src} alt={alt} layout="fill" objectFit="cover" />
+    </div>
+  )
 };
 
 export default CardImage;

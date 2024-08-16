@@ -1,8 +1,11 @@
 .footer_wrapper {
-    background-color: white;
+    background-color: #444d5d;
+    color: white;
     align-items: center;
-    height: 200px;
+    height: 10rem;
     grid-template-columns: 1fr 1fr;
+    overflow: auto;
+    padding: 1rem .25rem;
 }
 
 .social,
@@ -10,10 +13,23 @@
 .social_links,
 .social_tag {
     flex-direction: column;
-    padding: 1.2em;
-    line-height: 2em;
+    padding: .2em;
+    line-height: 1.5em;
+    margin: 0 .5rem
+}
+
+.social,
+.notice {
+    background: #00000050;
+    border-radius: 0.25rem;
+    height: 100%;
 }
 
 .social_links span:nth-child(even) {
     display: none;
+}
+
+.social_tag,
+.notice span:first-child {
+    color: #fa8072;
 }

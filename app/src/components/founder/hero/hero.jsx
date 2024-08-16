@@ -4,15 +4,16 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <figure className={`${styles.hero_body} flex`}>
-        <img className={styles.hero_img} src="images\hero-mobile.png" />
+        <img className={styles.hero_img} src="images\founder-mike-and-mandy.png" />
         <figcaption className={styles.hero_caption}>
           <div className={`${styles.hero_caption_box} flex center`}>
             <h1 className={styles.hero_caption_title}>
-              Discover the Perfect Fireplace
+              Meet the artisans behind our masterpieces!
             </h1>
             <div className={`${styles.hero_caption_subtitle} center flex`}>
-              <span>Book consultation:</span>
-              <span>0121 345 6789</span>
+              <span>Mike</span>
+              <span> & </span>
+              <span>Mandy</span>
             </div>
           </div>
         </figcaption>

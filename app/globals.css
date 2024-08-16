@@ -1,9 +1,10 @@
 *,
 body,
-h1 {
+h1,
+.main_wrapper {
   margin: 0;
   padding: 0;
-  font-size: 17px;
+  font-size: 16px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -26,4 +27,8 @@ h1 {
 
 h1 {
   font-size: 2em;
+}
+
+main.main_wrapper {
+  margin-top: 4.5rem;
 }
