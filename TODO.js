@@ -31,5 +31,7 @@
 //# Modify the fetch request to replace the country keyword with the state variable.
 //# Console.log the updated state fetch request.
 //# Update the review component to support the incoming review description, author and location.
-//# 
-//# 
+//# Styling the review component.
+
+
+

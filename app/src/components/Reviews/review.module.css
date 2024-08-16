@@ -1,7 +1,6 @@
 .review_wrapper {
     height: 100%;
     width: 100%;
-    background-color: blue ;
     padding: 1rem;
 
 }
@@ -12,5 +11,47 @@
 }
 
 .review_header_wrapper p {
-    margin: 0.5rem; 
+    width: 100%;
+    margin: 0.5rem;
+}
+
+.review_button_wrapper button {
+    border: none;
+    background: #ff814f;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    border-radius: .25rem;
+    color: white;
+    font-weight: 600;
+}
+
+.review_button_wrapper button:active,
+.review_button_wrapper button:focus {
+    border: none;
+    background: #444d5d;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    border-radius: .25rem;
+    color: white;
+    font-weight: 600;
+}
+
+.review_user_wrapper {
+    background: #444d5d;
+    padding: 1rem;
+    border-radius: .5rem;
+    align-content: space-between;
+    max-width: 30rem;
+}
+
+.review_user_wrapper div:first-child {
+    color: white;
+}
+
+.review_user_wrapper div:last-child {
+    background: #ff814f;
+    bottom: 0;
+    padding: .5rem;
+    margin-top: .5rem;
+    border-radius: .5rem;
 }

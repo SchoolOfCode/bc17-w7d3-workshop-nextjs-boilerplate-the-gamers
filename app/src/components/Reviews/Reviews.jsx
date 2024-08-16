@@ -38,34 +38,32 @@ const Reviews = () => {
   }, [selectedCountry]);
 
   return (
-    <div className={`${styles.review_wrapper} flex center`} > 
+    <div className={`${styles.review_wrapper} grid center`} >
       <div className={`${styles.review_header_wrapper} flex center`}>
-        <h1> Trusted. </h1>
-        <p>
+        <h1 className={`flex center`}> Trusted. </h1>
+        <p className={`flex center`}>
           We`ve got thousands of happy customers all over the UK. Choose
           your country to see the latest review:
         </p>
       </div>
-      <div className={`${styles.review_button_wrapper} flex center`}>
-        <button onClick={() => handleCountryChange("England")}>
-          England
-        </button>
-        <button onClick={() => handleCountryChange("Wales")}>
-          Wales
-        </button>
-        <button onClick={() => handleCountryChange("Scotland")}>
-          Scotland
-        </button>
-      </div>
-      <div className={`${styles.review_user_wrapper} flex center`} >
-        <div>{countriesData.text}</div>
-        <div>
-          {/* {countriesData.author} {countriesData ? "-" : " "}
-          {countriesData.location} */}
-          {selectedCountry !== null
-            ? `${countriesData.author} - ${countriesData.location}`
-            : ""}
+      <div className={`${styles.review_container} grid center`}>
+        <div className={`${styles.review_button_wrapper} flex center`}>
+          <button onClick={() => handleCountryChange("England")}>
+            England
+          </button>
+          <button onClick={() => handleCountryChange("Wales")}>
+            Wales
+          </button>
+          <button onClick={() => handleCountryChange("Scotland")}>
+            Scotland
+          </button>
         </div>
+        {selectedCountry !== null ? (
+          <div className={`${styles.review_user_wrapper} flex center`} >
+            <div className={`flex center`}>{countriesData.text}</div>
+            <div className={`flex center`}>{countriesData.author} - {countriesData.location}
+            </div>
+          </div>) : ''}
       </div>
     </div>
   );
