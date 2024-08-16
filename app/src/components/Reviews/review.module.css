@@ -1,0 +1,16 @@
+.review_wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: blue ;
+    padding: 1rem;
+
+}
+
+.review_header_wrapper h1 {
+    width: 100%;
+    border-bottom: 0.15rem solid grey;
+}
+
+.review_header_wrapper p {
+    margin: 0.5rem; 
+}
