@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 const Reviews = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
 
-  const [countriesData, setCountriesData] = useState(null);
-
+  const [countriesData, setCountriesData] = useState(" ");
+  
   console.log(selectedCountry);
 
   console.log("Countries data: ", countriesData);
@@ -29,6 +29,8 @@ const Reviews = () => {
 
   return (
     <div>
+      <h1> Trusted. </h1>
+      <p> We've got thousands of happy customers all over the UK. Choose your country to see the latest review: </p>
       <button onClick={() => handleCountryChange("England")}>
         England
       </button>
@@ -38,6 +40,12 @@ const Reviews = () => {
       <button onClick={() => handleCountryChange("Scotland")}>
         Scotland
       </button>
+      <div>
+        {countriesData.text}
+      </div>
+      <div>
+        {countriesData.author} {countriesData ? "-" : " "} {countriesData.location}
+      </div>
     </div>
   );
 };
