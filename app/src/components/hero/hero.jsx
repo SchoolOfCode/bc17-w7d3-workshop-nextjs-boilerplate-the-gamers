@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./hero.module.css";
 
 export default function Hero() {
@@ -12,7 +13,7 @@ export default function Hero() {
             </h1>
             <div className={`${styles.hero_caption_subtitle} center flex`}>
               <span>Book consultation:</span>
-              <span>0121 345 6789</span>
+              <span><Link href="/booking">Booking</Link></span>
             </div>
           </div>
         </figcaption>

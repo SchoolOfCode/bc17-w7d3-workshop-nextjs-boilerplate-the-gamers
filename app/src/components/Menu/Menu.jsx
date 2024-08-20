@@ -9,6 +9,7 @@ export default function Menu({ children }) {
           {children}
           <Link href="../" className={styles.menuItem}>Home</Link>
           <Link href="/founders" className={styles.menuItem}>Founders</Link>
+          <Link href="/booking" className={styles.menuItem}>Booking</Link>
         </div>
       </div>
     </>

@@ -33,5 +33,20 @@
 //# Update the review component to support the incoming review description, author and location.
 //# Styling the review component.
 
+//# ---------------
 
-
+//?? Week 8 Day 2 
+//?? Create a 'Design Booking' page ("/booking") 
+//? Create a new folder in './src' for 'booking', and create 'booking/page.js'. ✅
+//? Add a menu entry to 'menu.jsx' to link to 'booking/page.js' and update the hero phone number on the home page. ✅
+//? Create a 'contactForm.jsx' component, and add it to 'booking/page.js'.✅
+//? Create a basic form in the component✅
+    //? Fieldset #1: Full name, Postcode, House Number + Street Name & City✅
+    //? Fieldset #2: Phone number & Email address.✅
+    //? Submit button "Request Design Consultation"✅
+//? Create a state for the form submission ("Full Name").
+//? Create a function and connect to the inputs, then console.log the data.
+//? Link the input values to read from the state.
+//? Show an error when form fields show empty data.
+//? Validate that no fields are empty on submission.
+//? Fix styling on Home Page hero button that links to Booking page.
