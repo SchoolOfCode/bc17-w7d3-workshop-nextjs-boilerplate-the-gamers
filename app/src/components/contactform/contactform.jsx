@@ -3,54 +3,56 @@ import { useState } from "react";
 import styles from "./contactform.module.css";
 
 export default function ContactForm() {
-  const [fullName, setFullName] = useState(null);
-  const [postcode, setPostcode] = useState(null);
-  const [address, setAddress] = useState(null);
-  const [city, setCity] = useState(null);
-  const [number, setNumber] = useState(null);
-  const [email, setEmail] = useState(null);
+  const [formData, setFormData] = useState('');
 
   //Add attributes to inputs
   //Grab input value and assign it to the fullName state
   //funmction handleInputChange
   //add onChange event listener to input
 
-  function handleFullNameChange(e) {
+  function handleChange(e) {
     e.preventDefault();
-    setFullName(e.target.value);
-    console.log(e.target.value);
+    setFormData((formData) =>
+      ({ ...formData, [e.target.name]: e.target.value })
+    );
+    console.log(formData);
   }
 
   return (
     <form>
       <fieldset className={`${styles.formFiedset} grid`}>
         <legend>Personal Information: </legend>
-        <label for="fullname">
+        <label htmlFor="fullname">
           Full Name:
           <input
             type="text"
             name="fullname"
-            onChange={handleFullNameChange}
-            value={fullName}
+            onChange={handleChange}
+            value={formData.fullName}
           />
         </label>
-        <label for="postcode">
-          Postcode: <input type="text" name="postcode" />
+        <label htmlFor="postcode">
+          Postcode: <input type="text" name="postcode"
+            onChange={handleChange} />
         </label>
-        <label for="address">
-          Street Address: <input type="text" name="address" />
+        <label htmlFor="address">
+          Street Address: <input type="text" name="address"
+            onChange={handleChange} />
         </label>
-        <label for="city">
-          City: <input type="text" name="city" />
+        <label htmlFor="city">
+          City: <input type="text" name="city"
+            onChange={handleChange} />
         </label>
       </fieldset>
       <fieldset className={`${styles.formFiedset} grid`}>
         <legend>Contact Information: </legend>
-        <label for="number">
-          Phone Number: <input type="text" name="number" />
+        <label htmlFor="number">
+          Phone Number: <input type="text" name="number"
+            onChange={handleChange} />
         </label>
-        <label for="email">
-          Email Address: <input type="text" name="email" />
+        <label htmlFor="email">
+          Email Address: <input type="text" name="email"
+            onChange={handleChange} />
         </label>
       </fieldset>
       <button>Request Design Consultation</button>
