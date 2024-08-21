@@ -2,6 +2,11 @@
 
 .formLegend {}
 
+.formLabelContainer {
+    grid-template-columns: 1fr 1fr;
+}
+
 .formLabel {}
+
 
 .formInput {}

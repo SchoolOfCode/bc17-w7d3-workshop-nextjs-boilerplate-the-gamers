@@ -50,3 +50,13 @@
 //? Show an error when form fields show empty data.
 //? Validate that no fields are empty on submission.
 //? Fix styling on Home Page hero button that links to Booking page.
+
+//? -------------------------
+
+//!! Week 8 Day 3 
+//! Check everyone understands the basics of using useReducer. ✅
+//! Create a new component for the reducer form ✅
+//! Create a new initial state for the form data ✅
+//! Create a reducer function that takes in the 'state' and 'action'.
+//! console.log the state data within the reducer function.
+//! 
