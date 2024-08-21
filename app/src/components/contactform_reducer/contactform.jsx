@@ -1,5 +1,5 @@
 "use client";
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import styles from "./contactform.module.css";
 
 const initialState = {
@@ -7,70 +7,198 @@ const initialState = {
     fullname: "",
     postcode: "",
     address: "",
-    street: "",
+    city: "",
     email: "",
     phone: "",
-  }
-}
+  },
+  errorStatus: false,
+  errorMessage: "",
+};
 
 function reducer(state, action) {
   switch (action.type) {
     case "CHANGE_FORM_DATA":
-      let newState = { ...state }
+      let newState = { ...state };
       const fieldName = action.payload.name;
       const newFieldValue = action.payload.value;
 
-      newState.data[fieldName] = newFieldValue;
+      if (!newFieldValue) {
+        return { errorStatus: true };
+      }
 
-      console.log(`Form data changed`)
+      newState.data[fieldName] = newFieldValue;
       return newState;
-      break;
+    case "SET_ERROR":
+      return {
+        ...state,
+        errorStatus: true,
+        errorMessage: action.payload.message,
+      };
+    case "CLEAR_ERROR":
+      return {
+        ...state,
+        errorStatus: false,
+      };
   }
 
   console.log(`Reducer Function`);
-  console.log(state);
+  console.log("Data", state);
   return state;
 }
 
 export default function ContactFormReducer() {
+  //Takes initial state and pass it to reducer function
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state)
 
   function handleChange(e) {
     e.preventDefault();
-    // setFormData((formData) => ({
-    //   ...formData,
-    //   [e.target.name]: e.target.value,
-    // })); 
-
-
     dispatch({
-      type: 'CHANGE_FORM_DATA',
+      type: "CHANGE_FORM_DATA",
       payload: {
         name: e.target.name,
-        value: e.target.value
-      }
-    })
-    console.log('State console log: ')
-    console.log(state)
-    console.log("handleChange function")
+        value: e.target.value,
+      },
+    });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    //Case when one of the field is not filled
+    if (
+      !initialState.data.fullname ||
+      !initialState.data.postcode ||
+      !initialState.data.address ||
+      !initialState.data.city ||
+      !initialState.data.phone ||
+      !initialState.data.email
+    ) {
+      //Dispatch an action
+      //Set error when one of the field is not filled
+      dispatch({
+        type: "SET_ERROR",
+        payload: { message: "Please fill all fields" },
+      });
+      return;
+    } else {
+      //Clear error when user fill all the fields
+      dispatch({
+        type: "CLEAR_ERROR",
+        payload: { message: null },
+      });
+    }
   }
 
   return (
     <>
       <h1>Contact Form Reducer</h1>
-      <form className={`${styles.formFiedset} grid`}>
-        <fieldset>
-          <label htmlFor="fullname">Full Name:
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <fieldset className={`${styles.formFiedset} grid`}>
+          <legend className={`${styles.formLegend}`}>
+            Personal Information:{" "}
+          </legend>
+          <span
+            className={`${styles.formLabelContainer} grid center`}
+          >
+            <label
+              htmlFor="fullname"
+              className={`${styles.formLabel} flex center`}
+            >
+              Full Name:
+            </label>
             <input
               type="text"
               name="fullname"
               onChange={handleChange}
-            // value={initialState.data.fullname}
-            /></label>
+              className={`${styles.formInput}`}
+            />
+          </span>
+          <span
+            className={`${styles.formLabelContainer} grid center`}
+          >
+            <label
+              htmlFor="postcode"
+              className={`${styles.formLabel} flex center`}
+            >
+              Postcode:{" "}
+            </label>
+            <input
+              type="text"
+              name="postcode"
+              onChange={handleChange}
+              className={`${styles.formInput}`}
+            />
+          </span>
+          <span
+            className={`${styles.formLabelContainer} grid center`}
+          >
+            <label
+              htmlFor="address"
+              className={`${styles.formLabel} flex center`}
+            >
+              Street Address:{" "}
+            </label>
+            <input
+              type="text"
+              name="address"
+              onChange={handleChange}
+              className={`${styles.formInput}`}
+            />
+          </span>
+          <span
+            className={`${styles.formLabelContainer} grid center`}
+          >
+            <label
+              htmlFor="city"
+              className={`${styles.formLabel} flex center`}
+            >
+              City:{" "}
+            </label>
+            <input
+              type="text"
+              name="city"
+              onChange={handleChange}
+              className={`${styles.formInput}`}
+            />
+          </span>
         </fieldset>
-        <fieldset></fieldset>
+        <fieldset className={`${styles.formFiedset} grid`}>
+          <legend>Contact Information: </legend>
+          <span
+            className={`${styles.formLabelContainer} grid center`}
+          >
+            <label
+              htmlFor="number"
+              className={`${styles.formLabel} flex center`}
+            >
+              Phone Number:{" "}
+            </label>
+            <input
+              type="text"
+              name="phone"
+              onChange={handleChange}
+              className={`${styles.formInput}`}
+            />
+          </span>
+          <span
+            className={`${styles.formLabelContainer} grid center`}
+          >
+            <label
+              htmlFor="email"
+              className={`${styles.formLabel} flex center`}
+            >
+              Email Address:{" "}
+            </label>
+            <input
+              type="text"
+              name="email"
+              onChange={handleChange}
+              className={`${styles.formInput}`}
+            />
+          </span>
+        </fieldset>
+        <h1>{state.errorStatus ? "Please fill all fields" : ""}</h1>
+        <button>Request Design Consultation</button>
       </form>
     </>
-  )
+  );
 }

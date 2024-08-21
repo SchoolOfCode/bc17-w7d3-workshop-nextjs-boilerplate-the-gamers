@@ -21,7 +21,7 @@
 
 //## HACKATHON
 //# Create a new 'Reviews' component.
-//# Link the component and include a dummy title. 
+//# Link the component and include a dummy title.
 //# Create a state for the selected country.
 //# console.log the result state.
 //# Create a dummy object with hardcoded values and console.log it.
@@ -35,15 +35,15 @@
 
 //# ---------------
 
-//?? Week 8 Day 2 
-//?? Create a 'Design Booking' page ("/booking") 
+//?? Week 8 Day 2
+//?? Create a 'Design Booking' page ("/booking")
 //? Create a new folder in './src' for 'booking', and create 'booking/page.js'. ✅
 //? Add a menu entry to 'menu.jsx' to link to 'booking/page.js' and update the hero phone number on the home page. ✅
 //? Create a 'contactForm.jsx' component, and add it to 'booking/page.js'.✅
 //? Create a basic form in the component✅
-    //? Fieldset #1: Full name, Postcode, House Number + Street Name & City✅
-    //? Fieldset #2: Phone number & Email address.✅
-    //? Submit button "Request Design Consultation"✅
+//? Fieldset #1: Full name, Postcode, House Number + Street Name & City✅
+//? Fieldset #2: Phone number & Email address.✅
+//? Submit button "Request Design Consultation"✅
 //? Create a state for the form submission ("Full Name").
 //? Create a function and connect to the inputs, then console.log the data.
 //? Link the input values to read from the state.
@@ -53,10 +53,10 @@
 
 //? -------------------------
 
-//!! Week 8 Day 3 
+//!! Week 8 Day 3
 //! Check everyone understands the basics of using useReducer. ✅
 //! Create a new component for the reducer form ✅
 //! Create a new initial state for the form data ✅
-//! Create a reducer function that takes in the 'state' and 'action'.
-//! console.log the state data within the reducer function.
-//! 
+//! Create a reducer function that takes in the 'state' and 'action'. ✅
+//! console.log the state data within the reducer function. ✅
+//!
