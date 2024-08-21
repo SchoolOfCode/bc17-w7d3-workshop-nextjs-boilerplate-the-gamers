@@ -52,64 +52,80 @@ export default function ContactForm() {
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
       <fieldset className={`${styles.formFiedset} grid`}>
-        <legend>Personal Information: </legend>
-        <label htmlFor="fullname">
-          Full Name:
+        <legend className={`${styles.formLegend}`}>Personal Information: </legend>
+        <span className={`${styles.formLabelContainer} grid center`}>
+          <label htmlFor="fullname" className={`${styles.formLabel} flex center`}>
+            Full Name:
+          </label>
           <input
             type="text"
             name="fullname"
             onChange={handleChange}
             value={formData.fullname}
+            className={`${styles.formInput}`}
           />
-        </label>
-        <label htmlFor="postcode">
-          Postcode:{" "}
+        </span>
+        <span className={`${styles.formLabelContainer} grid center`}>
+          <label htmlFor="postcode" className={`${styles.formLabel} flex center`}>
+            Postcode:{" "}
+          </label>
           <input
             type="text"
             name="postcode"
             onChange={handleChange}
             value={formData.postcode}
+            className={`${styles.formInput}`}
           />
-        </label>
-        <label htmlFor="address">
-          Street Address:{" "}
+        </span>
+        <span className={`${styles.formLabelContainer} grid center`}>
+          <label htmlFor="address" className={`${styles.formLabel} flex center`}>
+            Street Address:{" "}
+          </label>
           <input
             type="text"
             name="address"
             onChange={handleChange}
             value={formData.address}
+            className={`${styles.formInput}`}
           />
-        </label>
-        <label htmlFor="city">
-          City:{" "}
+        </span>
+        <span className={`${styles.formLabelContainer} grid center`}>
+          <label htmlFor="city" className={`${styles.formLabel} flex center`}>
+            City:{" "}
+          </label>
           <input
             type="text"
             name="city"
             onChange={handleChange}
             value={formData.city}
+            className={`${styles.formInput}`}
           />
-        </label>
+        </span>
       </fieldset>
       <fieldset className={`${styles.formFiedset} grid`}>
         <legend>Contact Information: </legend>
-        <label htmlFor="number">
-          Phone Number:{" "}
+        <span className={`${styles.formLabelContainer} grid center`}>
+          <label htmlFor="number" className={`${styles.formLabel} flex center`}>
+            Phone Number:{" "}</label>
           <input
             type="text"
             name="number"
             onChange={handleChange}
             value={formData.number}
+            className={`${styles.formInput}`}
           />
-        </label>
-        <label htmlFor="email">
-          Email Address:{" "}
+        </span>
+        <span className={`${styles.formLabelContainer} grid center`}>
+          <label htmlFor="email" className={`${styles.formLabel} flex center`}>
+            Email Address:{" "}</label>
           <input
             type="text"
             name="email"
             onChange={handleChange}
             value={formData.email}
+            className={`${styles.formInput}`}
           />
-        </label>
+        </span>
       </fieldset>
       <h1>{error ? "Please fill all fields" : ""}</h1>
       <button>Request Design Consultation</button>

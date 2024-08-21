@@ -59,7 +59,7 @@ export default function ContactFormReducer() {
   return (
     <>
       <h1>Contact Form Reducer</h1>
-      <form>
+      <form className={`${styles.formFiedset} grid`}>
         <fieldset>
           <label htmlFor="fullname">Full Name:
             <input
