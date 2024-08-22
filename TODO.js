@@ -71,11 +71,11 @@
     // Make a delay to change form button to 'Submitted' 👌
     // Update ternary operator to include 'Submitted' state 👌
     // Reset form upon submission, fields set to blank 👌
-    // Specific validation errors eg not valid phone number, not valid email address 
+    // Specific validation errors eg not valid phone number, not valid email address ⚪️
 
     // Testing 
-    // At least one user journey 
+    // At least one user journey ⚪️
 
-    // Thurs evening prep
-    // Testing research - high level plan for a component 
-    // Think about error handling - efficient way to do this? Removing / keeping input validation?
+    // Thurs evening prep 
+    // Testing research - high level plan for a component ⚪️
+    // Think about error handling - efficient way to do this? Removing / keeping input validation? ⚪️
