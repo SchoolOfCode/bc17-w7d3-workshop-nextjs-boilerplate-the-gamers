@@ -37,6 +37,7 @@ function reducer(state, action) {
         ...state,
         errorStatus: true,
         errorMessage: action.payload.message,
+        buttonStatus: action.payload.status,
       };
     case "CLEAR_ERROR":
       // Action to clear an error ##  
@@ -44,7 +45,7 @@ function reducer(state, action) {
         ...state,
         errorStatus: false,
         errorMessage: "",
-        buttonStatus: "Submitted"
+        buttonStatus: action.payload.status,
       };
     // case "SUBMITTING_FORM":
     //   return {
@@ -83,30 +84,32 @@ export default function ContactFormReducer() {
     // Function to handle form submission ##  
     e.preventDefault(); // Prevent the default form submission behavior !!  
 
-    if (
-      !state.data.fullname ||
-      !state.data.postcode ||
-      !state.data.address ||
-      !state.data.city ||
-      !state.data.phone ||
-      !state.data.email
-    ) {
-      dispatch({
-        type: "SET_ERROR",
-        payload: { message: "Please fill all fields" },
-      }); // Sets an error message if any form field is empty !!  
-      return;
-    } else {
-      dispatch({
-        type: "CLEAR_ERROR",
-        payload: { message: null },
-      },
-        // {
-        //   type: "SUBMITTING_FORM"
-        // }); // Clears the error message if all fields are filled ##  
-      )
-    }
-    // }, timeout);
+    setTimeout(() => {
+      if (
+        !state.data.fullname ||
+        !state.data.postcode ||
+        !state.data.address ||
+        !state.data.city ||
+        !state.data.phone ||
+        !state.data.email
+      ) {
+        dispatch({
+          type: "SET_ERROR",
+          payload: { message: "Please fill all fields", status: "" },
+
+        }); // Sets an error message if any form field is empty !!  
+        return;
+      } else {
+        dispatch({
+          type: "CLEAR_ERROR",
+          payload: {
+            message: null,
+            status: "Submitting"
+          }
+        }
+        )
+      }
+    }, timeout);
 
   }
 
