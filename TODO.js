@@ -60,3 +60,20 @@
 //! Create a reducer function that takes in the 'state' and 'action'. ✅
 //! console.log the state data within the reducer function. ✅
 //!
+
+
+// Hackathon
+// Fixing the form  
+//Display an error when not all fields are filled 👌
+    //Once all fields are filled change the button to 'Submitting' 👌
+    // Fix bug with submission 
+    // Hide error 👌
+    // Make a delay to change form button to 'Submitted'
+    // Update trenary operator to include 'Submitted' state
+    // Specific validation errors eg not valid phone number, not valid email address 
+
+    // Testing 
+    // At least one user journey 
+
+    // Thurs evening prep
+    // Testing research - high level plan for a component 
