@@ -46,7 +46,7 @@
         position: absolute;
         width: 50vw;
         max-width: 25rem;
-        height: 25vh;
+        height: auto;
         border-radius: 0 0 2rem 2rem;
         padding-bottom: 1.5rem;
         top: 0;

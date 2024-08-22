@@ -4,7 +4,7 @@ import styles from "./main.module.css";
 
 function main() {
   return (
-    <main className="main_wrapper">
+    <main>
       <Hero />
       <Process />
     </main>

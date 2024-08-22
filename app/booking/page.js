@@ -4,14 +4,7 @@ import ContactFormReducer from "../src/components/contactform_reducer/contactfor
 
 export default function Booking() {
   return (
-    <div className="main_wrapper">
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      Booking Page
-      {/* <ContactForm/> */}
+    <div className={`main_wrapper`}>
       <ContactFormReducer />
     </div>
   );

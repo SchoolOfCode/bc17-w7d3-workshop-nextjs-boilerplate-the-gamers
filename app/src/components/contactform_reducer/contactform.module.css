@@ -1,0 +1,68 @@
+.title {
+    background: #ff814f;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    margin-top: 2.5rem;
+}
+
+.form {
+    padding: 1rem;
+}
+
+.formFieldset {
+    border: none;
+}
+
+.formLegend {
+    color: #ff814f;
+}
+
+.formLabelContainer {
+    margin: .5rem 0;
+    padding: .5rem;
+    grid-template-columns: 1fr fit-content(50%);
+    background: #dfe3e9;
+    border-radius: .2rem;
+}
+
+.formLabel {
+    justify-content: flex-end;
+    margin-right: .5rem;
+}
+
+
+.formInput {
+    padding: .2rem;
+    border: none;
+    border-radius: .2rem;
+    min-width: 45vw;
+}
+
+.formButton {
+    border: none;
+    padding: .5rem 1rem;
+    background: #ff814f;
+    color: white;
+    border-radius: .2rem;
+}
+
+.formErrorContainer {
+    color: #fff;
+    border: .2rem solid #ff0037;
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+    background: linear-gradient(45deg, #ff0037 5%, transparent 5%, transparent 10%, #ff0037 10%, #ff0037 15%, transparent 15%, transparent 20%, #ff0037 20%, #ff0037 25%, transparent 25%, transparent 30%, #ff0037 30%, #ff0037 35%, transparent 35%, transparent 40%, #ff0037 40%, #ff0037 45%, transparent 45%, transparent 50%, #ff0037 50%, #ff0037 55%, transparent 55%, transparent 60%, #ff0037 60%, #ff0037 65%, transparent 65%, transparent 70%, #ff0037 70%, #ff0037 75%, transparent 75%, transparent 80%, #ff0037 80%, #ff0037 85%, transparent 85%, transparent 90%, #ff0037 90%, #ff0037 95%, transparent 95%, #fff);
+    border-radius: .2rem;
+}
+
+.formError {
+    color: #ff0037;
+    background: #fff;
+    padding: .5rem 2rem;
+    border-radius: .2rem;
+}
+
+.formButton:active,
+.formButton:focus {
+    background: #cc673f;
+}
