@@ -53,6 +53,7 @@ function reducer(state, action) {
         buttonStatus: action.payload.status,
       };
     case "SUBMITTED_FORM":
+      document.getElementById("form").reset();
       return {
         ...state,
         buttonStatus: action.payload.status,
@@ -114,19 +115,19 @@ export default function ContactFormReducer() {
       type: "CLEAR_ERROR",
       payload: {
         message: null,
-        status: "Submitted",
+        status: "Submitting",
       },
     });
     setTimeout(() => {
-      if (state.buttonStatus === "Submitting") {
+      // if (state.buttonStatus.value === "Submitting") {
         dispatch({
           type: "SUBMITTED_FORM",
           payload: {
             status: "Submitted",
           },
         });
-      }
-    }, [3000]);
+      // }
+    }, 3000);
   }
 
   return (
@@ -137,6 +138,7 @@ export default function ContactFormReducer() {
       <form
         onSubmit={(e) => handleSubmit(e)}
         className={`${styles.form} grid center`}
+        id="form" 
       >
         <fieldset className={`${styles.formFieldset} grid`}>
           <legend className={`${styles.formLegend}`}>
@@ -153,6 +155,7 @@ export default function ContactFormReducer() {
             </label>
             <input
               type="text"
+              pattern="[a-z][A-Z]"
               name="fullname"
               onChange={handleChange}
               className={`${styles.formInput}`}
@@ -202,6 +205,7 @@ export default function ContactFormReducer() {
             <input
               type="text"
               name="city"
+              // pattern="[a-z]"
               onChange={handleChange}
               className={`${styles.formInput}`}
             />
@@ -222,7 +226,7 @@ export default function ContactFormReducer() {
               Phone Number:{" "}
             </label>
             <input
-              type="text"
+              type="tel"
               name="phone"
               onChange={handleChange}
               className={`${styles.formInput}`}
@@ -238,7 +242,7 @@ export default function ContactFormReducer() {
               Email Address:{" "}
             </label>
             <input
-              type="text"
+              type="email"
               name="email"
               onChange={handleChange}
               className={`${styles.formInput}`}
@@ -261,7 +265,7 @@ export default function ContactFormReducer() {
           {state.buttonStatus === "Submitting"
             ? `Submitting...`
             : state.buttonStatus === "Submitted"
-            ? `Submitted...`
+            ? `Submitted ✅`
             : `Request Design Consultation`}
         </button>
       </form>

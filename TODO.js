@@ -66,10 +66,11 @@
 // Fixing the form  
 //Display an error when not all fields are filled 👌
     //Once all fields are filled change the button to 'Submitting' 👌
-    // Fix bug with submission 
+    // Fix bug with submission 👌
     // Hide error 👌
-    // Make a delay to change form button to 'Submitted'
-    // Update trenary operator to include 'Submitted' state
+    // Make a delay to change form button to 'Submitted' 👌
+    // Update ternary operator to include 'Submitted' state 👌
+    // Reset form upon submission, fields set to blank 👌
     // Specific validation errors eg not valid phone number, not valid email address 
 
     // Testing 
@@ -77,3 +78,4 @@
 
     // Thurs evening prep
     // Testing research - high level plan for a component 
+    // Think about error handling - efficient way to do this? Removing / keeping input validation?
