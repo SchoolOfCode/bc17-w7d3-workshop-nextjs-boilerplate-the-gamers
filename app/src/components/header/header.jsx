@@ -2,8 +2,9 @@
 import styles from "./header.module.css";
 
 import Menu from "../Menu/Menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 function Header() {
   const [toggleButton, setToggleButton] = useState(false);
@@ -12,7 +13,11 @@ function Header() {
     setToggleButton(!toggleButton);
   }
 
-  console.log(toggleButton);
+  //Close menu when user navigates to another page
+  const pathname = usePathname();
+  useEffect(() => {
+    setToggleButton(false);
+  }, [pathname]);
 
   return (
     <>
