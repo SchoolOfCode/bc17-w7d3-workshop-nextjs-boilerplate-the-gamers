@@ -17,7 +17,8 @@ export default function Menu({ children }) {
           >
             Founders
           </Link>
-          <Link href="/booking" className={styles.menuItem}>
+          <Link href="/booking" className={styles.menuItem}
+            id="booking">
             Booking
           </Link>
         </div>

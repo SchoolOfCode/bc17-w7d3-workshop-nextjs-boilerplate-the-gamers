@@ -253,8 +253,7 @@ export default function ContactFormReducer() {
         </fieldset>
         {state.errorStatus ? (
           <span
-            className={`${styles.formErrorContainer} flex center`}
-          >
+            className={`${styles.formErrorContainer} flex center`} id="errorMessage">
             <h3 className={`${styles.formError} flex center`}>
               ⚠︎&nbsp; &nbsp; &nbsp; Please fill in all fields!&nbsp;
               &nbsp; &nbsp; ⚠︎
@@ -263,12 +262,12 @@ export default function ContactFormReducer() {
         ) : (
           ""
         )}
-        <button className={`${styles.formButton} center`}>
+        <button className={`${styles.formButton} center`} id="submitButton">
           {state.buttonStatus === "Submitting"
             ? `Submitting...`
             : state.buttonStatus === "Submitted"
-            ? `Submitted ✅`
-            : `Request Design Consultation`}
+              ? `Submitted ✅`
+              : `Request Design Consultation`}
         </button>
       </form>
     </>

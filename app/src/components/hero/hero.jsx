@@ -13,7 +13,7 @@ export default function Hero() {
             </h1>
             <div className={`${styles.hero_caption_subtitle} center flex`}>
               <span>Book consultation:</span>
-              <span><Link href="/booking">Booking</Link></span>
+              <span><Link href="/booking" id="booking">Booking</Link></span>
             </div>
           </div>
         </figcaption>
