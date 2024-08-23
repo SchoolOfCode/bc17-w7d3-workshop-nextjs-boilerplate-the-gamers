@@ -61,44 +61,37 @@
 //! console.log the state data within the reducer function. ✅
 //!
 
-
 // Hackathon
-// Fixing the form  
+// Fixing the form
 //Display an error when not all fields are filled 👌
-    //Once all fields are filled change the button to 'Submitting' 👌
-    // Fix bug with submission 👌
-    // Hide error 👌
-    // Make a delay to change form button to 'Submitted' 👌
-    // Update ternary operator to include 'Submitted' state 👌
-    // Reset form upon submission, fields set to blank 👌
-    // Specific validation errors eg not valid phone number, not valid email address ⚪️
+//Once all fields are filled change the button to 'Submitting' 👌
+// Fix bug with submission 👌
+// Hide error 👌
+// Make a delay to change form button to 'Submitted' 👌
+// Update ternary operator to include 'Submitted' state 👌
+// Reset form upon submission, fields set to blank 👌
+// Specific validation errors eg not valid phone number, not valid email address ⚪️
 
-    // Testing 
-    // At least one user journey ⚪️
+// Testing
+// At least one user journey ⚪️
 
-    // Thurs evening prep 
-    // Testing research - high level plan for a component ⚪️
-    // Think about error handling - efficient way to do this? Removing / keeping input validation? ⚪️
+// Thurs evening prep
+// Testing research - high level plan for a component ⚪️
+// Think about error handling - efficient way to do this? Removing / keeping input validation? ⚪️
 
+//User journey 1
+// Type in URL ✅
+// land on website ✅
+// Explore website ✅
 
- //User journey 1
-    // land on website, like website, want to book 
-    // open booking 
-    // put in details - miss out a field 
-    // get told to fill in field 
-    // fill in rest of field 
-    // hit submit 
+//User journey 1
+// land on website, like website, want to book
+// open booking
+// put in details - miss out a field
+// get told to fill in field
+// fill in rest of field
+// hit submit
 
-
- // User journey 3
-    // land on website
-    // click on founders, want to explore founders page 
-
-
-    //User journey 2
-    // land on website, like website, want to book 
-    // open booking 
-    // put in details - fill in field wrong  
-    // get told to fill in field 
-    // fill in rest of field 
-    // hit submit 
+// User journey 3
+// land on website
+// click on founders, want to explore founders page

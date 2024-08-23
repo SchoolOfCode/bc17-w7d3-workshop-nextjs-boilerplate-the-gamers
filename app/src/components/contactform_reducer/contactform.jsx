@@ -1,6 +1,6 @@
 "use client"; // This directive indicates that the code is running on the client side !!
 
-import { useReducer } from "react"; // Importing the useReducer hook from React !!
+import { useReducer, useState } from "react"; // Importing the useReducer hook from React !!
 
 import styles from "./contactform.module.css"; // Importing CSS module for styling the form !!
 
@@ -68,6 +68,9 @@ export default function ContactFormReducer() {
   // Main component function ##
   const [state, dispatch] = useReducer(reducer, initialState); // Using the useReducer hook with the reducer function and initial state !!
 
+  // Check for valid input
+  const [isValid, setIsValid] = useState(null);
+
   function handleChange(e) {
     // Function to handle changes in form inputs ##
     e.preventDefault(); // Prevent the default form submission behavior !!
@@ -120,12 +123,12 @@ export default function ContactFormReducer() {
     });
     setTimeout(() => {
       // if (state.buttonStatus.value === "Submitting") {
-        dispatch({
-          type: "SUBMITTED_FORM",
-          payload: {
-            status: "Submitted",
-          },
-        });
+      dispatch({
+        type: "SUBMITTED_FORM",
+        payload: {
+          status: "Submitted",
+        },
+      });
       // }
     }, 3000);
   }
@@ -138,7 +141,7 @@ export default function ContactFormReducer() {
       <form
         onSubmit={(e) => handleSubmit(e)}
         className={`${styles.form} grid center`}
-        id="form" 
+        id="form"
       >
         <fieldset className={`${styles.formFieldset} grid`}>
           <legend className={`${styles.formLegend}`}>
@@ -155,7 +158,6 @@ export default function ContactFormReducer() {
             </label>
             <input
               type="text"
-              pattern="[a-z][A-Z]"
               name="fullname"
               onChange={handleChange}
               className={`${styles.formInput}`}

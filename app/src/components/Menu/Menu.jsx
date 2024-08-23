@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./menu.module.css"
+import styles from "./menu.module.css";
 
 export default function Menu({ children }) {
   return (
@@ -7,9 +7,19 @@ export default function Menu({ children }) {
       <div className={`${styles.menu_wrapper} flex center`}>
         <div className={`${styles.menu_container} flex`}>
           {children}
-          <Link href="../" className={styles.menuItem}>Home</Link>
-          <Link href="/founders" className={styles.menuItem}>Founders</Link>
-          <Link href="/booking" className={styles.menuItem}>Booking</Link>
+          <Link href="/" className={styles.menuItem}>
+            Home
+          </Link>
+          <Link
+            href="/founders"
+            className={styles.menuItem}
+            id="founders"
+          >
+            Founders
+          </Link>
+          <Link href="/booking" className={styles.menuItem}>
+            Booking
+          </Link>
         </div>
       </div>
     </>
