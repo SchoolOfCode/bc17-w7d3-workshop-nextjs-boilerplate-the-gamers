@@ -79,3 +79,26 @@
     // Thurs evening prep 
     // Testing research - high level plan for a component ⚪️
     // Think about error handling - efficient way to do this? Removing / keeping input validation? ⚪️
+
+
+ //User journey 1
+    // land on website, like website, want to book 
+    // open booking 
+    // put in details - miss out a field 
+    // get told to fill in field 
+    // fill in rest of field 
+    // hit submit 
+
+
+ // User journey 3
+    // land on website
+    // click on founders, want to explore founders page 
+
+
+    //User journey 2
+    // land on website, like website, want to book 
+    // open booking 
+    // put in details - fill in field wrong  
+    // get told to fill in field 
+    // fill in rest of field 
+    // hit submit 
